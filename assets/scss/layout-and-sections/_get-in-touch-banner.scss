@@ -1,0 +1,59 @@
+#get-in-touch-banner{
+
+  #get-in-touch-banner-text{
+    img{
+      width: 70px;
+    }
+  }
+
+  #get-in-touch-banner-img{
+    img{
+      max-width: 100%;
+      position: relative;
+      top: -19%;
+    }
+  }
+
+  @include media-breakpoint-down(xl){
+    #get-in-touch-banner-text{
+      img{
+        width: 62px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg){
+    #get-in-touch-banner-text{
+      img{
+        width: 50px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg){
+    #get-in-touch-banner-text{
+      img{
+        width: 40px;
+      }
+    }
+
+    #get-in-touch-banner-img{
+      img{
+        max-width: 100%;
+        position: relative;
+        top: -10%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 374px){
+    #get-in-touch-banner-text{
+      p{
+        font-size: 12px !important;
+      }
+      img{
+        width: 30px;
+      }
+    }
+  }
+}

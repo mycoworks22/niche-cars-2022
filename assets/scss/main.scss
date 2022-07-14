@@ -1,0 +1,23 @@
+@import "abstracts/colours";
+@import "abstracts/fonts";
+
+//important to be imported here after the fonts
+@import "../bootstrap/scss/bootstrap.scss";
+
+@import "abstracts/base";
+@import "abstracts/animations";
+@import "abstracts/spacing";
+@import "abstracts/object-fit";
+
+@import "components/btns";
+@import "components/headings";
+@import "components/lists";
+@import "components/forms";
+
+@import "layout-and-sections/page-headers";
+@import "layout-and-sections/main-nav";
+@import "layout-and-sections/about-niche";
+@import "layout-and-sections/get-in-touch-banner";
+@import "layout-and-sections/niche-services";
+@import "layout-and-sections/contact-us-section";
+@import "layout-and-sections/footer";

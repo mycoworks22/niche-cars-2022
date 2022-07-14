@@ -1,0 +1,29 @@
+#about-niche{
+
+  background-image: url("../img/cars-2.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+
+  .about-niche-images{
+    position: relative;
+
+    &__img1{
+      width: 40%;
+    }
+    &__img2{
+      width: 60%;
+    }
+    &__img3{
+      position: absolute;
+      left: 0%;
+      top: 50%;
+      transform: translate(80%, -50%);
+      width: 30%;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-image: none;
+  }
+}

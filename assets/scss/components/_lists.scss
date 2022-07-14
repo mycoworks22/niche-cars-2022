@@ -1,0 +1,24 @@
+.dot-list{
+  list-style: none;
+
+  li{
+    position: relative;
+    padding-left: 25px;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 7.5px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $orange;
+    }
+
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+}

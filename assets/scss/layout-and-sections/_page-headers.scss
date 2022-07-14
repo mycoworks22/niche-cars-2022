@@ -1,0 +1,77 @@
+// home page header
+#home-page-header{
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: $dark-gray;
+  background-image: url("../img/home-page-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content 1fr;
+
+
+  #header-content{
+    .header-logo{
+      img{
+        width: 100%;
+        max-width: 620px;
+      }
+    }
+
+    .header-2-text{
+      &__line{
+        height: 100%;
+        width: 3px;
+        background-color: white;
+      }
+    }
+
+    #header-scroll-down-btn{
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+
+      transition: all 0.2s ease-in-out;
+
+      @include downAndUp;
+
+      &:hover{
+        background-color: $dark-orange;
+      }
+    }
+
+  }
+
+  @include media-breakpoint-down(lg){
+    #header-content{
+      .header-logo{
+        img{
+          width: 100%;
+          max-width: 500px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    #header-content{
+      .header-logo{
+        img{
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    #header-content{
+      #header-scroll-down-btn{
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

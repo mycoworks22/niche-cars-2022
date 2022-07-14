@@ -1,0 +1,29 @@
+.section-h{
+  font-family: $font-family-raleway;
+  font-size: 36px;
+  line-height: 118%;
+  font-weight: 400;
+
+  &::after{
+    content: '';
+    display: block;
+    width: 85px;
+    height: 3px;
+    background-color: $orange;
+    margin-top: 20px;
+  }
+
+  &--on-orange{
+    &::after{
+      background-color: white;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    font-size: 30px;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 20px;
+  }
+}

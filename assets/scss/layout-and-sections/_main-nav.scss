@@ -1,0 +1,113 @@
+#main-nav{
+
+  #main-nav-logo{
+    img{
+      width: 280px;
+    }
+  }
+
+  .burger{
+    cursor: pointer;
+    z-index: 20000;
+    width: 31px;
+    height: 25px;
+
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+    .burger-line{
+      border-top: 3px solid white;
+      transition: all 0.2s linear;
+    }
+
+    &--open{
+      .burger-line{
+        &--1{
+          width: 31px;
+        }
+        &--2{
+            width: 18px;
+        }
+        &--3{
+            width: 24px;
+        }
+      }
+    }
+
+    &--close{
+      justify-content: center;
+
+      .burger-line{
+        &--1{
+          position: relative;
+          top: 3px;
+          width: 31px;
+          transform:rotate(45deg);
+        }
+        &--2{
+          display: none;
+        }
+        &--3{
+          width: 31px;
+          transform:rotate(-45deg);
+        }
+      }
+    }
+
+    &:hover{
+      .burger-line{
+        &--1{
+          width: 31px;
+        }
+        &--2{
+          width: 31px;
+        }
+        &--3{
+          width: 31px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    #main-nav-logo{
+      img{
+        width: 200px;
+      }
+    }
+  }
+}
+
+#mobile-nav-wrap{
+
+  // transitions are added in the JS
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-gray;
+  z-index: 10000;
+  transform: translateX(100%);
+
+  #mobile-nav{
+    height: 100%;
+
+    .mobile-nav-link{
+      // width: fit-content;
+      transform: translateX(300px);
+      opacity: 0;
+
+      transition: all 0.4s ease ;
+
+      &--show{
+        transform: translateX(0px);
+        opacity: 100;
+      }
+    }
+  }
+}
