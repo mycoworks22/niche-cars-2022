@@ -17,12 +17,27 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://kit.fontawesome.com/be3a5a4e18.js?v=1.0" crossorigin="anonymous"></script>
 
+  <!-- SCROLL LIBRARY CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <!-- JS FILES  -->
-  <script src="assets/js/header-scroll.js?v=1.0" defer></script>
+  <script src="assets/js/scrolls.js?v=1.0" defer></script>
   <script src="assets/js/mobile-nav.js?v=1.0" defer></script>
+
 
 </head>
 <body>
+
+<!-- SCROLL TO TOP BTN  -->
+<!-- style in scss/components/_btns.scss  -->
+<a href="#" id="scroll-to-top-btn" class="text-decoration-none bg-dark-orange d-none justify-content-center align-items-center">
+  <span class="material-icons text-white">
+    arrow_upward
+  </span>
+</a>
+<!-- -------------  -->
+
 
 <!-- HEADER  -->
 <!-- style in scss/layout-and-sections/_page-headers.scss  -->
@@ -44,7 +59,7 @@
         <a href="#" class="text-decoration-none">
           <i class="fab fa-instagram text-white hover-orange fs-14 fs-sm-18"></i>
         </a>
-        <a href="#" class="btns btns--orange fs-12 px-4 py-2 d-xl-none ms-auto ms-sm-4">
+        <a href="enquire.html" class="btns btns--orange fs-12 px-4 py-2 d-xl-none ms-auto ms-sm-4">
           Enquire Now
         </a>
       </div>
@@ -79,7 +94,7 @@
         <a href="#" class="text-decoration-none text-white hover-orange font-raleway fs-15 fw-500 me-0 me-xl-4">
           Contact Us
         </a>
-        <a href="#" class="btns btns--orange fs-15 px-4 py-2 d-xl-block d-none">
+        <a href="enquire.html" class="btns btns--orange fs-15 px-4 py-2 d-xl-block d-none">
           Enquire Now
         </a>
       </div>
@@ -147,14 +162,15 @@
         </div>
 
         <!-- book btn  -->
-        <!-- js in js/header-scroll.js  -->
+        <!-- js in js/scrolls.js  -->
         <div class="py-4 py-lg-5">
-          <a href="#" class="btns btns--orange fs-16 fs-lg-18 px-sm-5 py-3">
+          <a href="#" class="btns btns--orange fs-16 fs-lg-18 px-sm-5 py-3" id="header-booking-btn">
             Book online now
           </a>
         </div>
 
         <!-- scroll down btn  -->
+        <!-- js in js/scrolls.js  -->
         <div id="header-scroll-down-btn" class="bg-orange rounded-circle d-flex align-items-center justify-content-center mt-5">
           <span class="material-icons text-white fs-30">keyboard_arrow_down</span>
         </div>
@@ -199,6 +215,7 @@
 </section>
 <!-- -------------  -->
 
+
 <!-- GET IN TOUCH BANNER  -->
 <!-- style in scss/layout-and-sections/_get-in-touch-banner.scss  -->
 <section id="get-in-touch-banner" class="bg-orange">
@@ -213,13 +230,15 @@
         </p>
       </div>
       <!-- image  -->
+      <!-- animated with AOS library, initialized in scrolls.js -->
       <div class="col-sm-6 order-sm-2 order-1" id="get-in-touch-banner-img">
-        <img src="assets/img/car.png" alt="" class="">
+        <img src="assets/img/car.png" alt="" data-aos="fade-left" data-aos-offset="180">
       </div>
     </div>
   </div>
 </section>
 <!-- -------------  -->
+
 
 <!-- NICHE SERVICES  -->
 <!-- style in scss/layout-and-sections/_niche-services.scss  -->
@@ -236,9 +255,11 @@
           <p class="niche-service__text text-white text-center font-inter fw-400 px-2 fs-sm-16 fs-14">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui urna a in suspendisse. Pellentesque vel turpis viverra sed sed.
           </p>
-          <a href="#" class="niche-service__btn my-sm-5 my-4">
-            <span class="material-icons">arrow_forward_ios</span>
-          </a>
+          <div class="niche-service__btn my-sm-5 my-4">
+            <a href="#" class="">
+              <span class="material-icons">arrow_forward_ios</span>
+            </a>
+          </div>
         </div>
       </div>
       <!-- 2  -->
@@ -251,9 +272,11 @@
           <p class="niche-service__text text-white text-center font-inter fw-400 px-2 fs-sm-16 fs-14">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui urna a in suspendisse. Pellentesque vel turpis viverra sed sed.
           </p>
-          <a href="#" class="niche-service__btn my-sm-5 my-4">
-            <span class="material-icons">arrow_forward_ios</span>
-          </a>
+          <div class="niche-service__btn my-sm-5 my-4">
+            <a href="#" class="">
+              <span class="material-icons">arrow_forward_ios</span>
+            </a>
+          </div>
         </div>
       </div>
       <!-- 3  -->
@@ -266,9 +289,11 @@
           <p class="niche-service__text text-white text-center font-inter fw-400 px-2 fs-sm-16 fs-14">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui urna a in suspendisse. Pellentesque vel turpis viverra sed sed.
           </p>
-          <a href="#" class="niche-service__btn my-sm-5 my-4">
-            <span class="material-icons">arrow_forward_ios</span>
-          </a>
+          <div class="niche-service__btn my-sm-5 my-4">
+            <a href="#" class="">
+              <span class="material-icons">arrow_forward_ios</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -313,6 +338,7 @@
   </div>
 </section>
 <!-- -------------  -->
+
 
 <!-- CONTACT US  -->
 <!-- style in scss/layout-and-sections/_contact-us-section.scss  -->
@@ -361,9 +387,9 @@
               <h4 class="text-dark-gray font-raleway fs-sm-24 fs-18 fw-600">
                 Email us
               </h4>
-              <p class="text-dark-gray font-inter fw-400 fs-14 fs-sm-18">
-                contact@mycosupport.co.uk
-              </p>
+              <a href="mailto:enquiries@nicheclassiccars.co.uk" class="text-decoration-none text-dark-gray hover-orange font-inter fw-400 fs-14 fs-sm-18">
+                enquiries@nicheclassiccars.co.uk
+              </a>
             </div>
           </div>
         </div>
@@ -402,6 +428,7 @@
   </div>
 </section>
 <!-- -------------  -->
+
 
 <!-- FOOTER  -->
 <!-- style in scss/layout-and-sections/_footer.scss  -->
